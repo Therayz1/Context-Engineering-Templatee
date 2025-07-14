@@ -210,17 +210,3 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 **ERAY COŞKUN tarafından oluşturulmuştur.**
 
 **🌟 Bu şablonu beğendiyseniz, lütfen yıldız verin ve paylaşın!**
-
----
-
-### 📞 İletişim
-
-*   **GitHub:** [@Therayz1](https://github.com/Therayz1)
-*   **Email:** [contact@example.com](mailto:contact@example.com)
-*   **LinkedIn:** [Eray Coşkun](https://linkedin.com/in/eray-coskun)
-
-### 🔗 İlgili Projeler
-
-*   [Context Engineering Metodolojisi](https://github.com/Therayz1/Context-Engineering-Methodology)
-*   [React Native Best Practices](https://github.com/Therayz1/React-Native-Best-Practices)
-*   [Expo Development Guide](https://github.com/Therayz1/Expo-Development-Guide) 
