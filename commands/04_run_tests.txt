@@ -1,1 +1,51 @@
- 
+ ## Testleri Çalıştırma ve Raporlama Komutu
+
+Bu komut, geliştirilen mobil uygulamanın kalitesini ve kararlılığını sağlamak için birim, entegrasyon ve isteğe bağlı olarak uçtan uca (E2E) testleri çalıştırır. Test sonuçları analiz edilir ve `output/test_reports` klasörüne kaydedilir.
+
+---
+
+**Komut Açıklaması:**
+
+Bu komut, bir yapay zeka ajanına (Mobilet), `07_testing_strategy.md` dosyasında belirtilen test araçlarını (Jest, React Native Testing Library) kullanarak projedeki tüm testleri çalıştırmasını söyler. Test sonuçları toplanır, özetlenir ve bir rapor halinde sunulur.
+
+**Yürütme Talimatı:**
+
+```bash
+# Proje dizinine geç
+cd mobile-app-expo-rn-v1/my-mobile-app
+
+# Birim ve Entegrasyon Testlerini Çalıştır (Jest)
+npm test -- --coverage --testResultsProcessor=jest-junit-reporter
+
+# Test sonuçlarını output/test_reports klasörüne taşı
+mv junit.xml ../output/test_reports/unit_integration_test_results.xml
+
+# Kod kapsamı raporunu oluştur (eğer Jest yapılandırmasında etkinse)
+# mv coverage/lcov-report ../output/test_reports/coverage_report
+
+# Uçtan Uca (E2E) Testlerini Çalıştır (Eğer Detox/Appium kurulu ve yapılandırılmışsa)
+# npx detox build --configuration ios.sim.debug
+# npx detox test --configuration ios.sim.debug
+
+# E2E test raporlarını output/test_reports klasörüne taşı
+# mv e2e_test_results.xml ../output/test_reports/
+
+# Test sonuçlarını özetleyen bir Markdown raporu oluştur
+# Bu adım, bir yapay zeka ajanına (bana) yaptırılmalıdır.
+# Ajan: Mobilet
+# Görev: Test Sonuçlarını Raporla
+# Referans Bağlam Dosyaları: context/07_testing_strategy.md
+# Referans Test Sonuçları: output/test_reports/unit_integration_test_results.xml
+# Çıktı Dosyası: output/test_reports/test_summary_report.md
+# Ek Talimatlar: Başarılı/başarısız test sayısı, kod kapsamı yüzdesi ve varsa hata detaylarını özetle.
+```
+
+**Beklenen Çıktı:**
+
+*   `output/test_reports` klasöründe, çalıştırılan testlerin sonuçlarını içeren XML veya JSON formatında dosyalar.
+*   `output/test_reports/test_summary_report.md` dosyasında, test sonuçlarını özetleyen okunabilir bir rapor.
+
+**Sonraki Adım:**
+
+Testler başarıyla tamamlandıktan ve raporlandıktan sonra, `05_prepare_for_deployment.txt` komutu ile uygulamanın dağıtım hazırlıklarına geçilebilir.
+

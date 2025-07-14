@@ -1,5 +1,3 @@
-# setup_environment.tpl
-
 ## Geliştirme Ortamı Kurulumu İçin Prompt Şablonu
 
 Bu şablon, React Native (Expo) mobil uygulama projesi için geliştirme ortamını kurmak üzere bir yapay zeka ajanına (Manus AI) verilecek komutun temel yapısını tanımlar. Bu şablon, `commands/01_setup_environment.txt` komutu tarafından kullanılır.
@@ -15,7 +13,7 @@ Bu prompt, ajandan `05_tech_stack.md` dosyasında belirtilen teknoloji yığın�
 Bu şablon, `commands/01_setup_environment.txt` dosyasındaki talimatlar doğrultusunda ajana iletilir. Ajan, bu şablondaki yönergeleri takip ederek ortam kurulumunu gerçekleştirir.
 
 ```
-# Ajan: Manus AI
+# Ajan: Mobilet
 # Görev: Mobil Uygulama Projesi Geliştirme Ortamını Kur
 
 # Referans Bağlam Dosyaları:

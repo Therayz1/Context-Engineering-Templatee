@@ -1,1 +1,53 @@
- 
+ ## Görevleri Yürütme Komutu
+
+Bu komut, `output/docs/task_list.md` dosyasında oluşturulan görev listesindeki görevleri sırayla ve adım adım yürütür. Her bir görev, ilgili React Native bileşenleri, ekranları, servisleri veya testleri oluşturarak gerçekleştirilir. Bu, projenin ana geliştirme döngüsünü oluşturur.
+
+---
+
+**Komut Açıklaması:**
+
+Bu komut, bir yapay zeka ajanına (Mobilet), görev listesindeki bir sonraki tamamlanmamış görevi almasını, bu görevi yerine getirmek için gerekli React Native (TypeScript) kodunu yazmasını ve sonuçları ilgili dosyalara (`.tsx`, `.ts`, `.test.ts`) kaydetmesini söyler. Ajan, her görevi tamamlarken `context` klasöründeki tüm kurallara ve yönergelere uymalıdır.
+
+**Yürütme Talimatı:**
+
+Bu komut, görev listesi tamamlanana kadar her görev için tekrarlanır. Her seferinde, bir sonraki görevin adı ve açıklaması sağlanır.
+
+```
+# Ajan: Mobilet
+# Görev: Mobil Uygulama Projesi Görevini Yürüt
+
+# Referans Bağlam Dosyaları:
+# - Tüm `context` klasörü
+
+# Referans Görev Listesi:
+# - output/docs/task_list.md
+
+# Kullanılacak Prompt Şablonu:
+# - prompts/execute_task.tpl
+
+# Hedef Dosya/Klasör:
+# - (Görevin içeriğine göre belirlenir, örn: src/components/atoms/Button.tsx)
+
+# Mevcut Görev:
+# - [Görev listesinden sıradaki görevin adı ve açıklaması buraya eklenecek]
+
+# Ek Talimatlar:
+# - Görevi tamamlamak için gerekli tüm React Native (TypeScript) kodunu yaz.
+# - Kodu, belirtilen hedef dosya/klasöre kaydet. Eğer dosya yoksa oluştur.
+# - Kodun her adımı için açıklayıcı yorumlar ekle.
+# - Gerekirse, ilgili test dosyalarını (`.test.ts`) `tests/unit` veya `tests/integration` klasörüne kaydet.
+# - Ekran görüntüleri veya UI/UX ile ilgili çıktılar için `output/screenshots` klasörünü kullan.
+# - Görev tamamlandığında, `output/docs/task_list.md` dosyasındaki ilgili görevi tamamlandı olarak işaretle.
+# - Herhangi bir hata veya belirsizlik durumunda, sorunu açıkla ve çözüm önerisi sun.
+```
+
+**Beklenen Çıktı:**
+
+*   İlgili React Native bileşenlerinin, ekranlarının, servislerinin veya testlerinin oluşturulması/güncellenmesi.
+*   Gerekli test raporlarının `output/test_reports` klasörüne kaydedilmesi.
+*   Görsel çıktılarının `output/screenshots` klasörüne kaydedilmesi.
+
+**Sonraki Adım:**
+
+Görev listesindeki tüm görevler tamamlandıktan sonra, `04_run_tests.txt` komutu ile testlerin çalıştırılması veya `05_prepare_for_deployment.txt` komutu ile dağıtım hazırlıklarına geçilebilir.
+

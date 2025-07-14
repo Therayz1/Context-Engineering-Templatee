@@ -1,1 +1,56 @@
- 
+## Geliştirme Ortamını Kurma Komutu
+
+Bu komut, React Native (Expo) mobil uygulama projesi için temel geliştirme ortamını hazırlar. Gerekli Node.js bağımlılıklarını yükler, Expo projesini başlatır ve temel klasör yapısını doğrular. Bu adım, projenin başlangıç noktasıdır ve diğer tüm mobil uygulama geliştirme faaliyetleri bu temel üzerine inşa edilecektir.
+
+---
+
+**Komut Açıklaması:**
+
+Bu komut, `05_tech_stack.md` dosyasında belirtilen Node.js kütüphanelerini (React Native, Expo, React Navigation, Zustand, Axios vb.) yükler. Ayrıca, Expo CLI aracılığıyla yeni bir Expo projesi başlatır ve temel proje yapısını oluşturur.
+
+**Yürütme Talimatı:**
+
+```bash
+# Proje dizinine geç
+cd mobile-app-expo-rn-v1
+
+# Expo CLI'yi global olarak yükle (eğer yüklü değilse)
+npm install -g expo-cli
+
+# Yeni bir Expo projesi başlat (boş bir şablonla)
+# 'my-mobile-app' yerine projenizin adını yazın
+expo init my-mobile-app --template blank --name "My Mobile App"
+
+# Oluşturulan proje dizinine geç
+cd my-mobile-app
+
+# Gerekli bağımlılıkları yükle (package.json'dan)
+npm install
+
+# Ek kütüphaneleri yükle (örneğin, React Navigation, Zustand, Axios)
+npm install react-navigation @react-navigation/native @react-navigation/stack zustand axios
+
+# Expo'nun yerel bağımlılıklarını yükle (eğer gerekiyorsa)
+expo install react-native-screens react-native-safe-area-context
+
+# Temel klasör yapısını oluştur (eğer daha önce oluşturulmadıysa)
+mkdir -p src/{assets/{images,fonts,icons},components/{atoms,molecules,organisms,templates},navigation,screens/{auth,main},services,store,utils,hooks,types} tests/{unit,integration,e2e}
+
+# README.md dosyasını oluştur
+echo "# My Mobile App - React Native Expo" > README.md
+
+# .gitignore dosyasını oluştur/güncelle
+echo -e "\nnode_modules/\n.expo/\n.expo-shared/\nweb-build/\n*.log\n*.jks\n*.keystore\n*.p12\n*.pem\n*.mobileprovision\n*.xccheckout\n*.xcworkspace\n*.xcodeproj/xcuserdata/\n*.xcscmblueprint\n*.build/\n*.ipa\n*.apk\n*.aab\noutput/builds/\noutput/test_reports/\noutput/screenshots/\noutput/docs/" >> .gitignore
+```
+
+**Beklenen Çıktı:**
+
+*   `mobile-app-expo-rn-v1` dizini altında temel Expo proje yapısı (`my-mobile-app` klasörü içinde).
+*   Gerekli Node.js kütüphanelerinin yüklü olması.
+*   `src` ve `tests` klasörleri altında detaylı alt klasör yapısı.
+*   `README.md` ve `.gitignore` dosyaları.
+
+**Sonraki Adım:**
+
+Bu komut başarıyla tamamlandıktan sonra, `02_generate_tasks.txt` komutu kullanılarak projenin detaylı görev listesi oluşturulabilir.
+

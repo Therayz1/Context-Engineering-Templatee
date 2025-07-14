@@ -1,1 +1,56 @@
- 
+ ## Detaylı Görev Listesi Oluşturma Komutu
+
+Bu komut, mobil uygulama projesinin `context` klasöründeki tüm dokümanları (proje genel bakışı, uygulama yapısı, kurallar, mimari vb.) referans alarak, projenin tamamlanması için gereken detaylı ve sıralı bir görev listesi oluşturur. Bu görev listesi, projenin yol haritası niteliğindedir ve `output/docs/task_list.md` dosyasına yazılacaktır.
+
+---
+
+**Komut Açıklaması:**
+
+Bu komut, bir yapay zeka modeline (Mobilet) projenin tüm bağlamını sağlayarak, adım adım yapılacak işleri içeren bir Markdown tabanlı görev listesi oluşturmasını ister. Görevler, `04_app_structure.md` ve `06_software_architecture.md` dosyalarındaki yapıya uygun olarak sıralanmalı ve her görev, net, ölçülebilir ve eyleme geçirilebilir olmalıdır.
+
+**Yürütme Talimatı:**
+
+Bu komut doğrudan bir shell komutu değildir. Bir yapay zeka ajanına (örneğin, bu görevi bana) aşağıdaki `prompt` şablonunu ve `context` dosyalarını sağlayarak yürütülmelidir:
+
+```
+# Ajan: Mobilet
+# Görev: Detaylı bir görev listesi oluştur
+
+# Referans Bağlam Dosyaları:
+# - context/01_persona.md
+# - context/02_project_overview.md
+# - context/03_rules.md
+# - context/04_app_structure.md
+# - context/05_tech_stack.md
+# - context/06_software_architecture.md
+# - context/07_testing_strategy.md
+# - context/08_api_integration.md
+# - context/09_performance_optimization.md
+# - context/10_deployment_guidelines.md
+
+# Kullanılacak Prompt Şablonu:
+# prompts/generate_tasklist.tpl
+
+# Çıktı Dosyası:
+# output/docs/task_list.md
+
+# Ek Talimatlar:
+# Görev listesi, 04_app_structure.md dosyasındaki ekranları ve 06_software_architecture.md dosyasındaki bileşen yapısını temel alarak oluşturulmalıdır.
+# Her görev, onay kutusu formatında (`- [ ] Görev Adı`) yazılmalı ve altında kısa bir açıklama içermelidir.
+# Görevler, bağımlılıklarına göre sıralanmalıdır (örn: önce atomlar, sonra moleküller, sonra ekranlar).
+# Örnek:
+#   - [ ] Atom Bileşenlerini Oluşturma
+#     - [ ] `Button.tsx` bileşenini oluştur.
+#     - [ ] `Input.tsx` bileşenini oluştur.
+#   - [ ] Kimlik Doğrulama Ekranlarını Oluşturma
+#     - [ ] `LoginScreen.tsx` ekranını oluştur ve gerekli bileşenleri entegre et.
+```
+
+**Beklenen Çıktı:**
+
+*   `output/docs/task_list.md` dosyasında, projenin tüm aşamalarını kapsayan, detaylı ve sıralı bir görev listesi.
+
+**Sonraki Adım:**
+
+Görev listesi oluşturulduktan sonra, `03_execute_tasks.txt` komutu kullanılarak listedeki görevler adım adım yürütülebilir.
+

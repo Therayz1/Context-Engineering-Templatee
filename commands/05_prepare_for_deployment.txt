@@ -1,1 +1,49 @@
- 
+ ## Dağıtım İçin Hazırlık Komutu
+
+Bu komut, mobil uygulamanın test ortamlarından veya doğrudan üretim ortamına dağıtımı için gerekli son hazırlıkları yapar. Bu, Expo Application Services (EAS) kullanarak derleme (build) ve gönderme (submit) süreçlerini içerir.
+
+---
+
+**Komut Açıklaması:**
+
+Bu komut, bir yapay zeka ajanına (Mobilet), `10_deployment_guidelines.md` dosyasında belirtilen adımları takip ederek uygulamanın dağıtım için hazır hale getirilmesini söyler. Bu, genellikle uygulamanın versiyon numarasını güncelleme, derleme ve mağazalara gönderme işlemlerini içerir.
+
+**Yürütme Talimatı:**
+
+```bash
+# Proje dizinine geç
+cd mobile-app-expo-rn-v1/my-mobile-app
+
+# Uygulama versiyonunu güncelle (app.json dosyasında)
+# Bu adım, bir yapay zeka ajanına (bana) yaptırılmalıdır.
+# Ajan: Mobilet
+# Görev: Uygulama Versiyonunu Güncelle
+# Referans Bağlam Dosyaları: context/10_deployment_guidelines.md
+# Ek Talimatlar: app.json dosyasındaki "version" ve "android.versionCode"/"ios.buildNumber" değerlerini artır.
+
+# EAS Build ile Android için üretim derlemesi oluştur
+# eas build --platform android --profile production
+
+# EAS Build ile iOS için üretim derlemesi oluştur
+# eas build --platform ios --profile production
+
+# Derleme tamamlandıktan sonra, EAS Submit ile Google Play Store ve App Store Connecte gönder
+# eas submit --platform android --latest
+# eas submit --platform ios --latest
+
+# Ek Talimatlar:
+# - Derleme ve gönderme süreçlerinin loglarını takip et.
+# - Herhangi bir hata durumunda, hatayı raporla ve çözüm önerisi sun.
+# - Mağaza listeleme bilgileri (ekran görüntüleri, açıklamalar) önceden hazırlanmış olmalıdır.
+```
+
+**Beklenen Çıktı:**
+
+*   Uygulamanın güncel versiyon numarası.
+*   Android için `.aab` veya `.apk` ve iOS için `.ipa` derleme dosyaları.
+*   Uygulamanın Google Play Store ve Apple App Store Connect platformlarına başarıyla gönderilmesi.
+
+**Sonraki Adım:**
+
+Uygulama mağazalarına başarıyla gönderildikten sonra, proje tamamlanmış demektir. Mağaza onay süreçleri takip edilmelidir.
+

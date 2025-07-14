@@ -1,6 +1,3 @@
-
-# generate_tasklist.tpl
-
 ## Detaylı Görev Listesi Oluşturma İçin Prompt Şablonu
 
 Bu şablon, mobil uygulama projesinin tüm `context` dosyalarını referans alarak, projenin tamamlanması için gereken detaylı ve sıralı bir görev listesi oluşturmak üzere bir yapay zeka ajanına (Manus AI) verilecek komutun temel yapısını tanımlar. Bu şablon, `commands/02_generate_tasks.txt` komutu tarafından kullanılır.
@@ -16,7 +13,7 @@ Bu prompt, ajandan projenin tüm bağlamını analiz etmesini ve `04_app_structu
 Bu şablon, `commands/02_generate_tasks.txt` dosyasındaki talimatlar doğrultusunda ajana iletilir. Ajan, bu şablondaki yönergeleri takip ederek `output/docs/task_list.md` dosyasını oluşturur.
 
 ```
-# Ajan: Manus AI
+# Ajan: Mobilet
 # Görev: Mobil Uygulama Projesi İçin Detaylı Görev Listesi Oluştur
 
 # Referans Bağlam Dosyaları:

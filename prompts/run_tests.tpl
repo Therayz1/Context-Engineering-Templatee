@@ -1,4 +1,3 @@
-
 # run_tests.tpl
 
 ## Testleri Çalıştırma ve Raporlama İçin Prompt Şablonu
@@ -16,7 +15,7 @@ Bu prompt, ajandan `07_testing_strategy.md` dosyasında belirtilen test araçlar
 Bu şablon, `commands/04_run_tests.txt` dosyasındaki talimatlar doğrultusunda ajana iletilir. Ajan, bu şablondaki yönergeleri takip ederek testleri çalıştırır ve raporlar.
 
 ```
-# Ajan: Manus AI
+# Ajan: Mobilet
 # Görev: Mobil Uygulama Testlerini Çalıştır ve Raporla
 
 # Referans Bağlam Dosyaları:

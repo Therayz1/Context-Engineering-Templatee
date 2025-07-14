@@ -1,6 +1,3 @@
-
-# prepare_for_deployment.tpl
-
 ## Dağıtım İçin Hazırlık Prompt Şablonu
 
 Bu şablon, mobil uygulamanın test ortamlarından veya doğrudan üretim ortamına dağıtımı için gerekli son hazırlıkları yapmak üzere bir yapay zeka ajanına (Manus AI) verilecek komutun temel yapısını tanımlar. Bu şablon, `commands/05_prepare_for_deployment.txt` komutu tarafından kullanılır.
@@ -16,7 +13,7 @@ Bu prompt, ajandan `10_deployment_guidelines.md` dosyasında belirtilen adımlar
 Bu şablon, `commands/05_prepare_for_deployment.txt` dosyasındaki talimatlar doğrultusunda ajana iletilir. Ajan, bu şablondaki yönergeleri takip ederek dağıtım hazırlıklarını gerçekleştirir.
 
 ```
-# Ajan: Manus AI
+# Ajan: Mobilet
 # Görev: Mobil Uygulamayı Dağıtım İçin Hazırla
 
 # Referans Bağlam Dosyaları:

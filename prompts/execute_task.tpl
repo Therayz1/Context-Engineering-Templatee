@@ -1,5 +1,3 @@
-# execute_task.tpl
-
 ## Tek Bir Görevi Yürütme İçin Prompt Şablonu
 
 Bu şablon, `output/docs/task_list.md` dosyasında tanımlanan görev listesindeki tek bir görevi yürütmek üzere bir yapay zeka ajanına (Manus AI) verilecek komutun temel yapısını tanımlar. Bu şablon, `commands/03_execute_tasks.txt` komutu tarafından kullanılır.
@@ -15,7 +13,7 @@ Bu prompt, ajandan belirli bir görevi yerine getirmesini, bu görevi tamamlamak
 Bu şablon, `commands/03_execute_tasks.txt` dosyasındaki talimatlar doğrultusunda, her bir görev için ayrı ayrı ajana iletilir. Ajan, bu şablondaki yönergeleri takip ederek görevi gerçekleştirir.
 
 ```
-# Ajan: Manus AI
+# Ajan: Mobilet
 # Görev: Mobil Uygulama Projesi Görevini Yürüt
 
 # Referans Bağlam Dosyaları:
